@@ -1,0 +1,21 @@
+--- xenomai-3-3.0.5/utils/analogy/analogy_calibrate.h.old	2017-06-25 22:12:42.225119590 +0200
++++ xenomai-3-3.0.5/utils/analogy/analogy_calibrate.h	2017-06-25 22:12:16.121133565 +0200
+@@ -30,6 +30,7 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include "error.h"
++#include <time.h>
+ 
+ extern struct timespec calibration_start_time;
+ extern a4l_desc_t descriptor;
+--- xenomai-3-3.0.5/utils/can/Makefile.am.old	2017-06-25 22:48:16.191624109 +0200
++++ xenomai-3-3.0.5/utils/can/Makefile.am	2017-06-25 22:48:45.223478563 +0200
+@@ -8,7 +8,7 @@
+ 	@XENO_USER_CFLAGS@ 				\
+ 	-I$(top_srcdir)/include
+ 
+-LDFLAGS = @XENO_AUTOINIT_LDFLAGS@ $(XENO_POSIX_WRAPPERS)
++LDFLAGS = @XENO_AUTOINIT_LDFLAGS@ $(XENO_POSIX_WRAPPERS) @XENO_USER_APP_LDFLAGS@
+ 
+ rtcanconfig_SOURCES = rtcanconfig.c
+ 
