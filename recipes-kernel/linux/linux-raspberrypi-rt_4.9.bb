@@ -1,11 +1,11 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-LINUX_VERSION ?= "4.9.33"
+LINUX_VERSION ?= "4.9.36"
 
-SRCREV := "c2d433ec521ef44a191a85d4e5143ca08a61625d"
+SRCREV := "c0e97d579b9efca6e554dfdfcaf930c58b79c77f"
 
 SRC_URI := "git://github.com/raspberrypi/linux.git;branch=rpi-4.9.y \
-            file://patch-4.9.33-rt23.patch \
+            file://patch-4.9.35-rt25.patch \
             file://linux-rpi-4.9.y-clk.patch \
           "
 SRC_URI += "file://defconfig"
