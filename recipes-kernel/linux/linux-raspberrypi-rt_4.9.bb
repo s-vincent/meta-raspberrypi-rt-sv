@@ -1,8 +1,8 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-LINUX_VERSION ?= "4.9.36"
+LINUX_VERSION ?= "4.9.38"
 
-SRCREV := "c0e97d579b9efca6e554dfdfcaf930c58b79c77f"
+SRCREV := "09db0de92c5336f6255c92b4b50bf4de24a1b212"
 
 SRC_URI := "git://github.com/raspberrypi/linux.git;branch=rpi-4.9.y \
             file://patch-4.9.35-rt25.patch \
