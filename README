@@ -10,15 +10,14 @@ Dependencies
 This layer depends on:
 
   URI: git://git.openembedded.org/bitbake
-  branch: master
+  branch: rocko
 
   URI: git://git.openembedded.org/openembedded-core
   layers: meta
-  branch: master
+  branch: rocko
 
-  URI: git://git.yoctoproject.org/xxxx
-  layers: xxxx
-  branch: master
+  URI: git://git.yoctoproject.org/meta-raspberrypi
+  branch: rocko
 
 
 Patches
@@ -61,4 +60,5 @@ other layers needed. e.g.:
 II. Misc
 ========
 
---- replace with specific information about the raspberrypi-rt-sv layer ---
+This layer provides PREEMPT-RT kernel (real-time) for Raspberry Pi.
+
