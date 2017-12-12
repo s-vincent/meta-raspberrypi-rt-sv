@@ -9,7 +9,7 @@ Dependencies
 
 This layer depends on:
 
-  URI: git://git.openembedded.org/bitbake
+  URI: git://git.yoctoproject.org/poky.git
   branch: rocko
 
   URI: git://git.openembedded.org/openembedded-core
