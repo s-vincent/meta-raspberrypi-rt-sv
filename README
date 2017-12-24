@@ -60,5 +60,5 @@ other layers needed. e.g.:
 II. Misc
 ========
 
-This layer provides PREEMPT-RT kernel (real-time) for Raspberry Pi.
+This layer provides PREEMPT-RT and I-pipe/Xenomai kernels for Raspberry Pi.
 
