@@ -7,12 +7,12 @@ python __anonymous() {
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/linux-raspberrypi-rt-dev:"
 
-LINUX_VERSION ?= "4.14.7"
+LINUX_VERSION ?= "4.14.12"
 LINUX_RPI_DEV_BRANCH ?= "rpi-4.14.y"
 
-SRCREV = "f55e87913ab71b00924b72bbff359cc2e0faaa7d"
+SRCREV = "cb68aeb5dec606bbe8343eb994797d80c396205a"
 SRC_URI = "git://github.com/raspberrypi/linux.git;protocol=git;branch=${LINUX_RPI_DEV_BRANCH} \
-					 file://patch-4.14.6-rt7.patch \
+					 file://patch-4.14.12-rt10.patch \
            file://fragment.cfg \
 					"
 
