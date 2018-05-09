@@ -13,7 +13,7 @@ SRC_URI = "git://github.com/raspberrypi/linux.git;branch=rpi-4.9.y \
 
 ARM_KEEP_OABI = "0"
 
-require ${TOPDIR}/../meta-raspberrypi/recipes-kernel/linux/linux-raspberrypi.inc
+require recipes-kernel/linux/linux-raspberrypi.inc
 
 SRC_URI[xeno.md5sum] = "6017203d0992bb5334498c196bf6f25d"
 SRC_URI[xeno.sha256sum] = "2c0dd3f0e36e4a10f97e0028989bb873e80f4d1ce212ac55fd3b28857c464f94"

@@ -1,13 +1,13 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-LINUX_VERSION ?= "4.9.77"
+LINUX_VERSION ?= "4.9.80"
 
-SRCREV = "783daf505c2d8ecf26eeb4b4cd657f4b48072540"
+SRCREV = "ffd7bf4085b09447e5db96edd74e524f118ca3fe"
 SRC_URI = "git://github.com/raspberrypi/linux.git;branch=rpi-4.9.y \
-           file://patch-4.9.76-rt61.patch \
+           file://patch-4.9.80-rpi-rt61.patch \
            file://linux-rpi-4.9.y-clk.patch \
            file://fragment.cfg \
            "
 
-require ${TOPDIR}/../meta-raspberrypi/recipes-kernel/linux/linux-raspberrypi.inc
+require recipes-kernel/linux/linux-raspberrypi.inc
 
