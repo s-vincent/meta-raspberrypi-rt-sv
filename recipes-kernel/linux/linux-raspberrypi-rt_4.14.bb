@@ -5,6 +5,7 @@ LINUX_RPI_DEV_BRANCH ?= "rpi-4.14.y-rt"
 
 SRCREV = "32f5076d836518eaf2e7b2caa2e6ee196d27210b"
 SRC_URI = "git://github.com/raspberrypi/linux.git;protocol=git;branch=${LINUX_RPI_DEV_BRANCH} \
+           file://patch-4.14-bcm2835.patch \
            file://fragment.cfg \
 					"
 
