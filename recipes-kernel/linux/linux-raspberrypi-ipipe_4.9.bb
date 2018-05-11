@@ -8,7 +8,7 @@ SRC_URI = "git://github.com/raspberrypi/linux.git;branch=rpi-4.9.y \
            file://linux-rpi-4.9.y-clk.patch \
            http://xenomai.org/downloads/xenomai/stable/xenomai-3.0.6.tar.bz2;name=xeno \
            file://ipipe-core-4.9.51-arm-3-rpi.patch;apply=0 \
-           file://defconfig \
+           file://fragment.cfg \
            "
 
 ARM_KEEP_OABI = "0"
@@ -19,7 +19,6 @@ SRC_URI[xeno.md5sum] = "6017203d0992bb5334498c196bf6f25d"
 SRC_URI[xeno.sha256sum] = "2c0dd3f0e36e4a10f97e0028989bb873e80f4d1ce212ac55fd3b28857c464f94"
 
 PV = "${LINUX_VERSION}"
-COMPATIBLE_MACHINE = "raspberrypi3"
 
 # Fixes QA Error
 FILES_kernel-base += "/lib/firmware"
