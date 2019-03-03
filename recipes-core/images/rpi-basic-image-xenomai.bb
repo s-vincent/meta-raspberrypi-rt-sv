@@ -18,7 +18,6 @@ IMAGE_INSTALL += " \
                   ntp \
                   wpa-supplicant \
                   iw \
-                  wireless-tools \
                  "
 IMAGE_FEATURES += "package-management"
 
