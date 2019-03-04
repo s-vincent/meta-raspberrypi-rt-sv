@@ -10,14 +10,14 @@ Dependencies
 This layer depends on:
 
   URI: git://git.yoctoproject.org/poky.git
-  branch: rocko
+  branch: thud
 
   URI: git://git.openembedded.org/meta-openembedded
   layers: meta-oe meta-networking meta-python
-  branch: rocko
+  branch: thud
 
   URI: git://git.yoctoproject.org/meta-raspberrypi
-  branch: rocko
+  branch: thud
 
 
 Patches
