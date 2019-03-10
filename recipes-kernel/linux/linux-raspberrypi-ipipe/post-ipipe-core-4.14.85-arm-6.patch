@@ -1,0 +1,24 @@
+diff -Nru a/drivers/irqchip/irq-bcm2835.c b/drivers/irqchip/irq-bcm2835.c
+--- a/drivers/irqchip/irq-bcm2835.c	2019-03-09 17:42:39.228361940 +0100
++++ b/drivers/irqchip/irq-bcm2835.c	2019-03-09 17:44:39.400796166 +0100
+@@ -180,6 +180,9 @@
+ 	.irq_hold = armctrl_mask_irq,
+ 	.irq_release = armctrl_unmask_irq,
+ #endif
++#ifdef CONFIG_ARM64                                                            
++	.irq_ack		= armctrl_ack_irq																								 
++#endif 
+ 	.flags	     = IRQCHIP_PIPELINE_SAFE,
+ };
+ 
+diff -Nru a/drivers/irqchip/irq-bcm2836.c b/drivers/irqchip/irq-bcm2836.c
+--- a/drivers/irqchip/irq-bcm2836.c	2019-03-09 17:42:39.228361940 +0100
++++ b/drivers/irqchip/irq-bcm2836.c	2019-03-09 17:45:12.685129534 +0100
+@@ -179,6 +179,7 @@
+ 		u32 ipi = ffs(mbox_val) - 1;
+ 
+ 		writel(1 << ipi, mailbox0);
++		dsb(sy);
+ 		ipipe_handle_multi_ipi(ipi, regs);
+ #endif
+ 	} else if (stat) {

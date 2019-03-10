@@ -8,7 +8,7 @@ python () {
 
 DESCRIPTION = "A Raspberry Pi image with I-pipe/Xenomai kernel and real-time \
                test suite"
-DEPENDS = "linux-raspberrypi-ipipe"
+DEPENDS = "linux-raspberrypi-ipipe qemuwrapper-cross"
 
 IMAGE_INSTALL += " \
                   rt-tests \

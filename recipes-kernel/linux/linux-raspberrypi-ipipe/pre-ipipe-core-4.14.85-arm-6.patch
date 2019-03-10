@@ -1,0 +1,26 @@
+diff -Nru a/drivers/irqchip/irq-bcm2835.c b/drivers/irqchip/irq-bcm2835.c
+--- a/drivers/irqchip/irq-bcm2835.c	2019-03-04 21:42:44.344124194 +0100
++++ b/drivers/irqchip/irq-bcm2835.c	2019-03-09 17:40:02.782546226 +0100
+@@ -175,10 +175,7 @@
+ static struct irq_chip armctrl_chip = {
+ 	.name = "ARMCTRL-level",
+ 	.irq_mask = armctrl_mask_irq,
+-	.irq_unmask = armctrl_unmask_irq,
+-#ifdef CONFIG_ARM64
+-	.irq_ack    = armctrl_ack_irq
+-#endif
++	.irq_unmask = armctrl_unmask_irq
+ };
+ 
+ static int armctrl_xlate(struct irq_domain *d, struct device_node *ctrlr,
+diff -Nru a/drivers/irqchip/irq-bcm2836.c b/drivers/irqchip/irq-bcm2836.c
+--- a/drivers/irqchip/irq-bcm2836.c	2019-03-04 21:42:44.344124194 +0100
++++ b/drivers/irqchip/irq-bcm2836.c	2019-03-09 17:40:16.186189967 +0100
+@@ -146,7 +146,6 @@
+ 		u32 ipi = ffs(mbox_val) - 1;
+ 
+ 		writel(1 << ipi, mailbox0);
+-		dsb(sy);
+ 		handle_IPI(ipi, regs);
+ #endif
+ 	} else if (stat) {
