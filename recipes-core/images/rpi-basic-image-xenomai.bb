@@ -8,7 +8,7 @@ python () {
 
 DESCRIPTION = "A Raspberry Pi image with I-pipe/Xenomai kernel and real-time \
                test suite"
-DEPENDS = "linux-raspberrypi-ipipe qemuwrapper-cross"
+DEPENDS += "linux-raspberrypi-ipipe qemuwrapper-cross"
 
 IMAGE_INSTALL += " \
                   linux-firmware-bcm43430 \
