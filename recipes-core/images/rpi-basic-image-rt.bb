@@ -8,7 +8,7 @@ python () {
 
 DESCRIPTION = "A Raspberry Pi image with PREEMPT-RT kernel and real-time test \
                suite"
-DEPENDS = "(linux-raspberrypi-rt|linux-raspberrypi-rt-dev)"
+DEPENDS += "(linux-raspberrypi-rt|linux-raspberrypi-rt-dev)"
 
 IMAGE_INSTALL += " \
                   linux-firmware-bcm43430 \
